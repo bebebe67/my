@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="София Иванова, Stack — веб-разработка под ключ: лендинги, сайты, магазины и веб-приложения. Полтора года в разработке. Дизайн, код и запуск.">
+  <meta name="theme-color" content="#0F1115">
+  <meta property="og:title" content="София Иванова — Stack">
+  <meta property="og:description" content="Собираю сайты слой за слоем: от лендинга до веб-приложения. Полтора года в разработке.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <title>София Иванова — Stack, веб-разработка под ключ</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314161C'/%3E%3Crect x='12' y='5' width='15' height='10' rx='2.2' fill='%23D6FF4A' opacity='.38'/%3E%3Crect x='8' y='11' width='15' height='10' rx='2.2' fill='%23D6FF4A' opacity='.68'/%3E%3Crect x='4' y='17' width='15' height='10' rx='2.2' fill='%23D6FF4A'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var savedTheme = localStorage.getItem("stack-theme");
+      if (savedTheme === "light" || savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        var themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta && savedTheme === "light") themeMeta.setAttribute("content", "#F4F5F1");
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="nav">
+    <div class="wrap nav-bar">
+      <a class="logo" href="#top">
+        <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="7" y="2" width="14" height="9" rx="2.2" fill="currentColor" opacity=".38"/><rect x="4" y="7.5" width="14" height="9" rx="2.2" fill="currentColor" opacity=".68"/><rect x="1" y="13" width="14" height="9" rx="2.2" fill="currentColor"/></svg></span>
+        Stack
+      </a>
+      <nav id="site-nav" class="nav-links" aria-label="Разделы">
+        <a href="#services">Услуги</a>
+        <a href="#work">Работы</a>
+        <a href="#process">Процесс</a>
+        <a href="#prices">Цены</a>
+        <a class="nav-cta" href="#contact">Обсудить</a>
+      </nav>
+      <div class="nav-tools">
+        <a class="status" href="#contact"><i></i> Свободна с 8 декабря</a>
+        <button class="icon-btn" id="theme" type="button" aria-label="Включить светлую тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M16 3.2A8 8 0 1 0 20.8 14 6.2 6.2 0 0 1 16 3.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">01 — София Иванова</p>
+          <h1>Собираю сайты<br><span>слой за слоем</span></h1>
+          <p class="hero-lead">Веб-разработка под ключ — от лендинга до веб&#8209;приложения.</p>
+          <p class="hero-sub">Frontend, backend, дизайн и запуск. Весь стек закрываю сама.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Обсудить проект</a>
+            <a class="btn btn-ghost" href="#work">Смотреть работы</a>
+          </div>
+          <ul class="stats">
+            <li><strong>40+</strong><span>проектов</span></li>
+            <li><strong>1,5 года</strong><span>в разработке</span></li>
+            <li><strong>2 часа</strong><span>на ответ в рабочее время</span></li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="layers">
+            <article class="layer" style="--shift:0">
+              <span>01</span>
+              <div><strong>Figma</strong><small>интерфейс</small></div>
+            </article>
+            <article class="layer" style="--shift:1">
+              <span>02</span>
+              <div><strong>React</strong><small>фронтенд</small></div>
+            </article>
+            <article class="layer" style="--shift:2">
+              <span>03</span>
+              <div><strong>Node.js</strong><small>сервер</small></div>
+            </article>
+            <article class="layer layer-accent" style="--shift:1">
+              <span>04</span>
+              <div><strong>PostgreSQL</strong><small>данные</small></div>
+            </article>
+          </div>
+          <div class="terminal" aria-hidden="true">
+            <div class="terminal-bar"><i></i><i></i><i></i><em>assemble.ts</em></div>
+            <div id="term-out"><div>$ stack new atlas</div><div>layer 1  brief</div><div>layer 2  prototype</div><div>layer 3  design</div><div>layer 4  frontend</div><div>layer 5  backend</div><div class="term-ok">ready  atlas.site</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pipeline" aria-hidden="true">
+      <div class="wrap pipeline-row">
+        <span>Идея</span><b></b><span>Прототип</span><b></b><span>Дизайн</span><b></b><span>Код</span><b></b><span>Запуск</span>
+      </div>
+    </div>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">02 — Услуги</p>
+          <h2>Слои стека</h2>
+          <p class="lede">Каждая услуга — отдельный слой со сроком и ценой «от». Типовой объём уже внутри, редкие интеграции считаем отдельно.</p>
+        </header>
+        <div class="services-layout reveal">
+          <div class="pile" aria-hidden="true">
+            <button class="plate is-active" type="button" tabindex="-1" data-layer="svc-landing"><span>01</span> Лендинги</button>
+            <button class="plate" type="button" tabindex="-1" data-layer="svc-corporate"><span>02</span> Компании</button>
+            <button class="plate" type="button" tabindex="-1" data-layer="svc-shop"><span>03</span> Магазины</button>
+            <button class="plate" type="button" tabindex="-1" data-layer="svc-app"><span>04</span> Приложения</button>
+            <button class="plate" type="button" tabindex="-1" data-layer="svc-support"><span>05</span> Поддержка</button>
+          </div>
+          <div class="service-list">
+            <article class="service is-active" id="svc-landing">
+              <div class="service-top">
+                <h3>Лендинги</h3>
+                <p>от 15 000 ₽</p>
+              </div>
+              <p class="meta-time">5–7 дней</p>
+              <p class="desc">Один экранный сценарий, который доводит человека до заявки. Дизайн, вёрстка, анимации и адаптив.</p>
+              <ul class="plain">
+                <li>Структура оффера и макеты экранов</li>
+                <li>Адаптивная вёрстка и анимации</li>
+                <li>Форма, базовая аналитика, выкладка</li>
+              </ul>
+              <ul class="badges"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li></ul>
+            </article>
+            <article class="service" id="svc-corporate">
+              <div class="service-top">
+                <h3>Корпоративные сайты</h3>
+                <p>от 40 000 ₽</p>
+              </div>
+              <p class="meta-time">2–3 недели</p>
+              <p class="desc">Многостраничник, который можно править без разработчика. CMS и SEO-база входят в старт.</p>
+              <ul class="plain">
+                <li>До 10 страниц и набор повторяемых блоков</li>
+                <li>Админка для текстов и новостей</li>
+                <li>Семантика, скорость, карта сайта</li>
+              </ul>
+              <ul class="badges"><li>WordPress</li><li>Next.js</li><li>PHP</li></ul>
+            </article>
+            <article class="service" id="svc-shop">
+              <div class="service-top">
+                <h3>Интернет-магазины</h3>
+                <p>от 75 000 ₽</p>
+              </div>
+              <p class="meta-time">4–6 недель</p>
+              <p class="desc">Каталог, корзина и оплата. Интеграции доставки и учёта — по списку, который фиксируем до старта.</p>
+              <ul class="plain">
+                <li>Каталог, фильтры, карточка товара</li>
+                <li>Корзина, заказ, платёжный сценарий</li>
+                <li>Админка заказов и остатков</li>
+              </ul>
+              <ul class="badges"><li>Vue</li><li>Laravel</li><li>MySQL</li></ul>
+            </article>
+            <article class="service" id="svc-app">
+              <div class="service-top">
+                <h3>Веб-приложения</h3>
+                <p>от 125 000 ₽</p>
+              </div>
+              <p class="meta-time">от 2 месяцев</p>
+              <p class="desc">Личные кабинеты, дашборды и API. Сначала роли и сценарии, потом интерфейс и сервер.</p>
+              <ul class="plain">
+                <li>Роли, права, личные кабинеты</li>
+                <li>Сложные формы, таблицы, API</li>
+                <li>Инструкция, как развернуть и сопровождать</li>
+              </ul>
+              <ul class="badges"><li>React</li><li>Node.js</li><li>PostgreSQL</li></ul>
+            </article>
+            <article class="service" id="svc-support">
+              <div class="service-top">
+                <h3>Доработка и поддержка</h3>
+                <p>от 1 250 ₽/час</p>
+              </div>
+              <p class="meta-time">абонемент от 10 000 ₽/мес</p>
+              <p class="desc">Фиксы, ускорение и рефакторинг живого проекта. Сначала смотрю код, потом называю, что трогать.</p>
+              <ul class="plain">
+                <li>Ошибки, формы, адаптив</li>
+                <li>Скорость и чистка чужого кода</li>
+                <li>Пакет часов на месяц</li>
+              </ul>
+              <ul class="badges"><li>по стеку проекта</li></ul>
+            </article>
+            <p class="next-step">Цены — ориентир. <a href="#calc">Прикинуть вилку</a> или <a href="#contact">описать задачу</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" id="work">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">03 — Работы</p>
+          <h2>Задача, решение, цифра</h2>
+          <p class="lede">Демонстрационные кейсы показывают формат карточки. Замените их своими: скрин, стек и что изменилось в цифрах.</p>
+        </header>
+        <div class="filters reveal" role="toolbar" aria-label="Фильтр работ">
+          <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">Все <em>5</em></button>
+          <button class="chip" type="button" data-filter="landing" aria-pressed="false">Лендинги <em>1</em></button>
+          <button class="chip" type="button" data-filter="corporate" aria-pressed="false">Компании <em>1</em></button>
+          <button class="chip" type="button" data-filter="shop" aria-pressed="false">Магазины <em>1</em></button>
+          <button class="chip" type="button" data-filter="app" aria-pressed="false">Приложения <em>2</em></button>
+        </div>
+        <div class="case-grid reveal">
+          <article class="case" data-kind="app">
+            <div class="screen" data-look="north">
+              <div class="chrome"><i></i><i></i><i></i><span>northline.app</span></div>
+              <div class="ui"><span class="ui-side"></span><span class="ui-main"><b></b><b></b><b></b></span></div>
+            </div>
+            <div class="case-body">
+              <p class="case-meta"><span>Веб-приложение</span><span>демо</span></p>
+              <h3>Northline</h3>
+              <ul class="metrics"><li>4.2с → 0.9с</li><li>конверсия +23%</li></ul>
+              <p>Кабинет заявок тормозил и терял лиды. Собрал новый интерфейс, упростил форму и включил кэш списков.</p>
+              <ul class="badges"><li>React</li><li>Node.js</li><li>PostgreSQL</li></ul>
+            </div>
+          </article>
+          <article class="case" data-kind="landing">
+            <div class="screen" data-look="forma">
+              <div class="chrome"><i></i><i></i><i></i><span>forma.site</span></div>
+              <div class="ui"><span class="ui-side"></span><span class="ui-main"><b></b><b></b><b></b></span></div>
+            </div>
+            <div class="case-body">
+              <p class="case-meta"><span>Лендинг</span><span>демо</span></p>
+              <h3>Forma</h3>
+              <ul class="metrics"><li>CPL −31%</li><li>140 заявок за месяц</li></ul>
+              <p>Сайт не объяснял продукт, заявки шли только из рекламы. Собрал лендинг с калькулятором конфигурации и ясной ценой.</p>
+              <ul class="badges"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </article>
+          <article class="case" data-kind="shop">
+            <div class="screen" data-look="polka">
+              <div class="chrome"><i></i><i></i><i></i><span>polka.shop</span></div>
+              <div class="ui"><span class="ui-side"></span><span class="ui-main"><b></b><b></b><b></b></span></div>
+            </div>
+            <div class="case-body">
+              <p class="case-meta"><span>Магазин</span><span>демо</span></p>
+              <h3>Polka</h3>
+              <ul class="metrics"><li>18% заказов онлайн</li><li>за первый квартал</li></ul>
+              <p>Каталог жил в соцсетях, оплатить на сайте было нельзя. Подключил корзину, оплату и остатки.</p>
+              <ul class="badges"><li>Vue</li><li>Laravel</li><li>MySQL</li></ul>
+            </div>
+          </article>
+          <article class="case" data-kind="app">
+            <div class="screen" data-look="smena">
+              <div class="chrome"><i></i><i></i><i></i><span>smena.app</span></div>
+              <div class="ui"><span class="ui-side"></span><span class="ui-main"><b></b><b></b><b></b></span></div>
+            </div>
+            <div class="case-body">
+              <p class="case-meta"><span>Веб-приложение</span><span>демо</span></p>
+              <h3>Smena</h3>
+              <ul class="metrics"><li>закрытие месяца</li><li>3 дня → 4 часа</li></ul>
+              <p>График смен жил в таблицах, выплаты расходились. Сделал роли, табель и API для бухгалтерии.</p>
+              <ul class="badges"><li>React</li><li>Node.js</li><li>PostgreSQL</li></ul>
+            </div>
+          </article>
+          <article class="case" data-kind="corporate">
+            <div class="screen" data-look="nord">
+              <div class="chrome"><i></i><i></i><i></i><span>nord.bureau</span></div>
+              <div class="ui"><span class="ui-side"></span><span class="ui-main"><b></b><b></b><b></b></span></div>
+            </div>
+            <div class="case-body">
+              <p class="case-meta"><span>Корпоративный</span><span>демо</span></p>
+              <h3>Nord</h3>
+              <ul class="metrics"><li>органика +40%</li><li>за 3 месяца</li></ul>
+              <p>Услуги объяснялись только на созвоне. Собрал структуру страниц, кейсы и форму брифа с базовой разметкой.</p>
+              <ul class="badges"><li>WordPress</li><li>PHP</li></ul>
+            </div>
+          </article>
+        </div>
+        <p class="hint" id="work-empty" hidden>В этом фильтре пока пусто.</p>
+        <p class="next-step"><a href="#contact">Обсудить похожий проект</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">04 — Процесс</p>
+          <h2>Семь слоёв до запуска</h2>
+          <p class="lede">Короткий маршрут. На каждом шаге понятно, что вы получаете и что нужно от вас.</p>
+        </header>
+        <ol class="timeline reveal">
+          <li>
+            <span class="step-no">01</span>
+            <div>
+              <h3>Бриф</h3>
+              <p>Собираю задачу, аудиторию и ограничение по сроку. Фиксирую, что считаем успехом: заявка, заказ или сценарий в кабинете.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">02</span>
+            <div>
+              <h3>Прототип</h3>
+              <p>Схема экранов до визуала. На ней видно, какие блоки входят в смету, а какие подождут следующей версии.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">03</span>
+            <div>
+              <h3>Дизайн</h3>
+              <p>Интерфейс в вашей айдентике. Две итерации правок входят в этап. Вёрстку начинаю после согласования.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">04</span>
+            <div>
+              <h3>Разработка</h3>
+              <p>Вёрстка, логика, интеграции. Показываю промежуточную сборку, а не только финал в последний день.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">05</span>
+            <div>
+              <h3>Тестирование</h3>
+              <p>Адаптив, формы, скорость и основные сценарии. Базовая SEO-разметка проверяется вместе с контентом.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">06</span>
+            <div>
+              <h3>Запуск</h3>
+              <p>Домен, хостинг, аналитика и короткая инструкция. Репозиторий и доступы передаю вам.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">07</span>
+            <div>
+              <h3>Поддержка</h3>
+              <p>14 дней на исправление ошибок разработки. Дальше — почасовка или абонемент, если проект живой.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section band" id="stack">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">05 — Стек</p>
+          <h2>Инструменты, которыми собираю</h2>
+          <p class="lede">Название бренда здесь буквальное: слой интерфейса, слой сервера, слой данных. Стек выбираю под задачу, а не наоборот.</p>
+        </header>
+        <div class="stack-layout reveal">
+          <ul class="stack-groups">
+            <li>
+              <h3>Frontend</h3>
+              <ul class="badges"><li>React</li><li>Vue</li><li>Next.js</li><li>TypeScript</li><li>HTML / CSS</li></ul>
+            </li>
+            <li>
+              <h3>Backend</h3>
+              <ul class="badges"><li>Node.js</li><li>Laravel</li><li>PHP</li><li>REST</li></ul>
+            </li>
+            <li>
+              <h3>Базы данных</h3>
+              <ul class="badges"><li>PostgreSQL</li><li>MySQL</li><li>Redis</li></ul>
+            </li>
+            <li>
+              <h3>DevOps</h3>
+              <ul class="badges"><li>Git</li><li>Docker</li><li>Nginx</li><li>CI</li></ul>
+            </li>
+            <li>
+              <h3>Дизайн</h3>
+              <ul class="badges"><li>Figma</li><li>прототипы</li><li>дизайн-системы</li></ul>
+            </li>
+            <li>
+              <h3>Платформы</h3>
+              <ul class="badges"><li>WordPress</li><li>ЮKassa</li><li>аналитика</li></ul>
+            </li>
+          </ul>
+          <aside class="code-card">
+            <p class="kicker">слой кода</p>
+            <pre tabindex="0"><code><span class="tok-c">// слой запуска</span>
+<span class="tok-k">export function</span> ship(site) {
+  <span class="tok-k">return</span> site
+    .test()
+    .deploy()
+    .handOver();
+}
+
+<span class="tok-k">const</span> owner = <span class="tok-s">"client"</span>;
+</code></pre>
+            <p class="hint">Код уходит вам вместе с короткой заметкой: как запустить и где менять тексты.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">06 — Обо мне</p>
+          <h2>Весь стек в одних руках</h2>
+        </header>
+        <div class="about-grid reveal">
+          <div class="portrait" role="img" aria-label="Знак Stack из четырёх слоёв">
+            <div class="portrait-layers" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="portrait-caption">
+              <strong>Stack</strong>
+              <span>full-cycle</span>
+            </div>
+          </div>
+          <div class="about-copy">
+            <p>Меня зовут София Иванова. Собираю сайты и веб-приложения для малого бизнеса и стартапов. Полтора года в разработке: лендинги, магазины, кабинеты.</p>
+            <p>Веду проект от структуры до рабочего сервера и остаюсь на связи после релиза. Отдельного менеджера между вами и кодом нет.</p>
+            <ul class="about-stats">
+              <li><b>40+</b><span>запущенных проектов</span></li>
+              <li><b>1,5 года</b><span>коммерческой разработки</span></li>
+              <li><b>1</b><span>подрядчик на весь стек</span></li>
+            </ul>
+          </div>
+        </div>
+        <ul class="principles reveal">
+          <li class="principle">
+            <span>01</span>
+            <h3>Сроки вслух</h3>
+            <p>Если появляется риск сдвига, пишу в тот же день, а не в день дедлайна.</p>
+          </li>
+          <li class="principle">
+            <span>02</span>
+            <h3>Код с памяткой</h3>
+            <p>Вместе с репозиторием отдаю короткую инструкцию: запуск, тексты, куда смотреть, если форма молчит.</p>
+          </li>
+          <li class="principle">
+            <span>03</span>
+            <h3>Ответ за 2 часа</h3>
+            <p>В рабочие дни с 11:00 до 19:00 МСК отвечаю в течение двух часов.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section band" id="reviews">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">07 — Отзывы</p>
+          <h2>Как звучит блок доверия</h2>
+          <p class="lede">Это образец вёрстки. Поставьте реальные отзывы с именем, компанией и проектом — выдуманные лучше убрать перед публикацией.</p>
+        </header>
+        <div class="review-grid reveal">
+          <figure class="review">
+            <p>«Раньше заявка терялась между таблицей и почтой. После запуска кабинета менеджеры видят статус, а я вижу, сколько лидов дошло до оплаты.»</p>
+            <footer><strong>Марина К.</strong> Северная линия · кабинет логиста</footer>
+          </figure>
+          <figure class="review">
+            <p>«Нужен был магазин, а не “сайт с кнопкой купить”. Корзина, оплата и остатки заработали в одном месте, без пяти сервисов вокруг.»</p>
+            <footer><strong>Игорь П.</strong> Полка · интернет-магазин</footer>
+          </figure>
+          <figure class="review">
+            <p>«Смету и этапы показали до договора. Дизайн поправили дважды, к вёрстке перешли, когда структура уже не спорила.»</p>
+            <footer><strong>Ева Л.</strong> Смена · учёт графиков</footer>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">08 — Пакеты</p>
+          <h2>Три входа, без догадок</h2>
+          <p class="lede">Пакет — стартовая сборка. Если нужна только доработка уже готового сайта, это почасовая поддержка, не пакет.</p>
+        </header>
+        <div class="price-grid reveal">
+          <article class="price-card">
+            <h3>Старт</h3>
+            <p class="sum"><small>от</small>15 000 ₽</p>
+            <p class="meta-time">5–7 дней</p>
+            <ul>
+              <li>Лендинг до 6 экранов</li>
+              <li>Адаптив и форма заявки</li>
+              <li>Базовая аналитика</li>
+              <li>Один раунд правок после сборки</li>
+              <li>Выкладка на хостинг</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact">Обсудить старт</a>
+          </article>
+          <article class="price-card is-featured">
+            <p class="flag">Чаще берут</p>
+            <h3>Бизнес</h3>
+            <p class="sum"><small>от</small>40 000 ₽</p>
+            <p class="meta-time">2–3 недели</p>
+            <ul>
+              <li>Сайт до 10 страниц</li>
+              <li>CMS для самостоятельных правок</li>
+              <li>SEO-база и скорость</li>
+              <li>Две итерации дизайна</li>
+              <li>Короткая инструкция редактору</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Обсудить бизнес</a>
+          </article>
+          <article class="price-card">
+            <h3>Про</h3>
+            <p class="sum"><small>от</small>75 000 ₽</p>
+            <p class="meta-time">от 4 недель</p>
+            <ul>
+              <li>Магазин или кабинет</li>
+              <li>Каталог, корзина или роли</li>
+              <li>Оплата и интеграции по списку</li>
+              <li>API там, где без него не собрать процесс</li>
+              <li>14 дней на ошибки после запуска</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact">Обсудить про</a>
+          </article>
+        </div>
+        <p class="hint" style="margin-top:16px">Веб-приложения с кабинетами и отдельным API — от 125 000 ₽. Состав фиксируем в смете до старта.</p>
+      </div>
+    </section>
+
+    <section class="section band" id="calc">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">09 — Калькулятор</p>
+          <h2>Вилка до созвона</h2>
+          <p class="lede">Выберите тип, число страниц и интеграции. Это разговорная оценка, не счёт.</p>
+        </header>
+        <div class="calc-layout reveal">
+          <fieldset class="calc-panel">
+            <legend class="sr-only">Параметры оценки</legend>
+            <div class="field">
+              <span>Тип сайта</span>
+              <div class="seg" role="radiogroup" aria-label="Тип сайта">
+                <label><input type="radio" name="kind" value="landing" checked> Лендинг</label>
+                <label><input type="radio" name="kind" value="corporate"> Компания</label>
+                <label><input type="radio" name="kind" value="shop"> Магазин</label>
+                <label><input type="radio" name="kind" value="app"> Приложение</label>
+              </div>
+            </div>
+            <label class="field">
+              <span class="field-label">Страницы: <output id="pages-out" for="pages">1</output></span>
+              <input id="pages" type="range" min="1" max="20" value="1">
+            </label>
+            <div class="extras">
+              <label><input type="checkbox" data-extra="10000" data-label="Оплата на сайте"> Оплата на сайте · +10 000 ₽</label>
+              <label><input type="checkbox" data-extra="9000" data-label="Заявки в CRM или Telegram"> Заявки в CRM или Telegram · +9 000 ₽</label>
+              <label><input type="checkbox" data-extra="10000" data-label="Админка / CMS"> Админка, чтобы править контент · +10 000 ₽</label>
+              <label><input type="checkbox" data-extra="7500" data-label="Базовое SEO"> Базовое SEO · +7 500 ₽</label>
+              <label><input type="checkbox" data-extra="7500" data-label="Анимации интерфейса"> Анимации интерфейса · +7 500 ₽</label>
+            </div>
+            <p class="hint" id="pages-hint" style="margin-top:12px"></p>
+          </fieldset>
+          <aside class="calc-result" aria-live="polite">
+            <p class="kicker">Ориентир</p>
+            <ul class="calc-lines" id="calc-lines">
+              <li><span>Лендинг</span><span>15 000 ₽</span></li>
+            </ul>
+            <p class="sum" id="calc-sum">15 000 ₽ – 19 000 ₽</p>
+            <p class="hint">Верхняя граница — запас на уточнения после брифа. Домен, хостинг и лицензии платёжек в вилку не входят.</p>
+            <button class="btn btn-primary" id="to-form" type="button" style="margin-top:16px">Перенести в заявку</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">10 — Вопросы</p>
+          <h2>Договор, правки, код</h2>
+        </header>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>Кому принадлежит код?</summary>
+            <p>Вам. После финальной оплаты передаю репозиторий, исходники и доступы к домену, хостингу и аналитике. Домен оформляем на вас.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Что если не понравится дизайн?</summary>
+            <p>На этапе дизайна входят две итерации правок. Если направление не то, останавливаемся до вёрстки и возвращаемся к референсам. Новые экраны сверх сметы считаем отдельно.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Работаете ли по договору?</summary>
+            <p>Состав, сроки и стоимость фиксирую до старта. ИП не оформлено, поэтому закрываем работу по переписке и согласованной смете. Если понадобится договор с самозанятым или юрлицом, это отдельный разговор.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Есть ли предоплата?</summary>
+            <p>Да. Обычно 40% на старт, 40% после согласованного дизайна и 20% перед передачей проекта. Небольшие задачи закрываем как 50/50.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Сколько правок входит в цену?</summary>
+            <p>Две итерации на дизайн и один раунд правок после сборки. Ошибки разработки исправляю в течение 14 дней после запуска. Новые функции оцениваю отдельно.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Кто готовит тексты и фото?</summary>
+            <p>Структуру и черновики могу собрать сам. Финальные формулировки и фотографии лучше с вашей стороны. Копирайтера и съёмку можно заложить в смету.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Что будет, если я задержу материалы?</summary>
+            <p>Срок сдвигается на время ожидания текстов, фото и доступов. Об этом пишу сразу, чтобы дата запуска не висела молча.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Можно доработать уже готовый сайт?</summary>
+            <p>Да. Сначала смотрю код, доступы и скорость, затем предлагаю, что чинить первым. Если проще собрать заново — скажу это до оценки работ.</p>
+          </details>
+        </div>
+        <p class="next-step"><a href="#contact">Остался вопрос — напишите его в заявке</a></p>
+      </div>
+    </section>
+
+    <section class="section band" id="notes">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">11 — Заметки</p>
+          <h2>Коротко по делу</h2>
+          <p class="lede">Три текста, с которых можно начать блог. Раскройте карточку — внутри практический разбор, без воды.</p>
+        </header>
+        <div class="notes-list reveal">
+          <details class="note">
+            <summary>
+              <span class="note-meta">12 ноября 2026 · 4 мин</span>
+              <span class="note-title">Почему лендинг медленный</span>
+              <span class="note-excerpt">Три проверки до того, как переделывать дизайн.</span>
+            </summary>
+            <div class="note-body">
+              <p>Сначала вес картинок. Герой на 4000 пикселей в исходнике почти всегда можно отдать как WebP около 1600 пикселей по длинной стороне. Телефон это не отличит, сеть отличит.</p>
+              <p>Дальше шрифты. Одна гарнитура и два начертания с загрузкой swap лучше, чем шесть файлов, которые блокируют текст. Третье — чужие скрипты: чат, пиксель и карта ниже первого экрана, после того как форма уже нарисована.</p>
+              <p>Замер имеет смысл на телефоне и медленной сети, не только в офисном Wi‑Fi. Если после этих трёх шагов всё ещё больно, тогда уже смотреть вёрстку и сервер.</p>
+            </div>
+          </details>
+          <details class="note">
+            <summary>
+              <span class="note-meta">3 ноября 2026 · 5 мин</span>
+              <span class="note-title">Что записать в договор до старта</span>
+              <span class="note-excerpt">Состав, правки, код и что в цену не входит.</span>
+            </summary>
+            <div class="note-body">
+              <p>Список экранов и функций, которые входят в эту версию. Рядом — что не входит: копирайт, фото, лицензии кассы, реклама. Так смета не растёт от фразы «ну и это тоже, раз уж делаете сайт».</p>
+              <p>Отдельно: число итераций дизайна, этапы оплаты, кому принадлежит код, какой срок на исправление ошибок и что считается новой функцией. Срок материалов со стороны заказчика тоже стоит записать: без текстов дата запуска — пожелание.</p>
+            </div>
+          </details>
+          <details class="note">
+            <summary>
+              <span class="note-meta">21 октября 2026 · 4 мин</span>
+              <span class="note-title">WordPress или свой код</span>
+              <span class="note-excerpt">Решение от задачи, не от моды на стек.</span>
+            </summary>
+            <div class="note-body">
+              <p>Если нужны страницы, новости и правка текстов каждую неделю, CMS обычно быстрее и дешевле в сопровождении. Редактор остаётся у клиента, разработчик не нужен на каждую запятую.</p>
+              <p>Если появляются роли, состояния заказа, оплаты внутри кабинета и отчёты, шаблон начинает трещать. Тогда честнее собрать приложение: интерфейс, API и база под процесс. Стек здесь следствие, а не визитка разработчика.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="reveal">
+          <p class="kicker">12 — Заявка</p>
+          <h2>Расскажите задачу</h2>
+          <p class="lede">Тип, бюджет, срок и пара ссылок на примеры. Этого хватает, чтобы ответить по существу, а не анкетой на двадцать полей.</p>
+          <ul class="channels">
+            <li><a data-contact="vk" href="https://vk.ru/id1133786912">ВКонтакте</a></li>
+            <li><a data-contact="telegram" href="https://t.me/soffff277">Telegram</a></li>
+            <li><a data-contact="email" data-write="text" href="mailto:sofiaaaa.ivanova@gmail.com">sofiaaaa.ivanova@gmail.com</a></li>
+            <li><a id="call-link" href="#contact">Забронировать созвон</a></li>
+          </ul>
+          <p class="promise" id="reply-promise">Отвечаю в течение 2 часов в рабочее время, 11:00–19:00 МСК. Свободна для проектов с 8 декабря.</p>
+        </div>
+        <div class="form-card reveal">
+          <form id="brief" novalidate autocomplete="on" aria-describedby="reply-promise">
+            <p class="form-alert" id="form-alert" role="alert" hidden>Проверьте поля, отмеченные ниже.</p>
+            <p class="hint" id="estimate-note" hidden></p>
+            <div class="form-row">
+              <label class="field">Имя
+                <input id="name" name="name" type="text" autocomplete="name" required>
+                <small class="error" hidden></small>
+              </label>
+              <label class="field">Как связаться
+                <input id="contact-field" name="contact" type="text" autocomplete="tel" placeholder="Телефон, почта или @telegram" required>
+                <small class="error" hidden></small>
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="field">Компания
+                <input name="company" type="text" autocomplete="organization">
+              </label>
+              <label class="field">Тип проекта
+                <select id="type" name="type" required>
+                  <option value="">Выберите</option>
+                  <option value="landing">Лендинг</option>
+                  <option value="corporate">Корпоративный сайт</option>
+                  <option value="shop">Интернет-магазин</option>
+                  <option value="app">Веб-приложение</option>
+                  <option value="support">Доработка и поддержка</option>
+                  <option value="unsure">Пока не знаю</option>
+                </select>
+                <small class="error" hidden></small>
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="field">Бюджет
+                <select id="budget" name="budget">
+                  <option value="">Пока не решил</option>
+                  <option>до 25 000 ₽</option>
+                  <option>25–60 000 ₽</option>
+                  <option>60–125 000 ₽</option>
+                  <option>от 125 000 ₽</option>
+                </select>
+              </label>
+              <label class="field">Срок
+                <input name="deadline" type="text" placeholder="К февралю">
+              </label>
+            </div>
+            <label class="field">Ссылки на примеры
+              <input name="links" type="text" placeholder="Сайты, которые нравятся по тону или структуре">
+            </label>
+            <label class="field">О задаче
+              <textarea name="message" maxlength="4000" placeholder="Что продаёте, что уже есть, что должно получиться" required></textarea>
+              <small class="error" hidden></small>
+            </label>
+            <label class="check">
+              <input name="consent" type="checkbox" required>
+              <span>Согласен на обработку данных, чтобы вы ответили по заявке. <a href="#privacy">Политика</a><small class="error" hidden></small></span>
+            </label>
+            <label class="hp">Не заполняйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+          </form>
+          <div class="success" id="success" hidden>
+            <h3>Черновик заявки готов</h3>
+            <p id="success-note">Текст скопирован, почтовая программа должна открыться.</p>
+            <pre id="success-text"></pre>
+            <button class="btn btn-ghost" id="edit-again" type="button">Изменить заявку</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section legal" id="privacy">
+      <div class="wrap">
+        <h2>Политика конфиденциальности</h2>
+        <p>Заявку принимает Иванова София. Форма не сохраняет данные на сервере: текст копируется в буфер и открывается в почте на sofiaaaa.ivanova@gmail.com.</p>
+        <p>Вы сами указываете имя, контакт, компанию, тип проекта, бюджет, срок, ссылки и описание задачи. Цель одна — ответить по проекту. База заявку не хранит. Чтобы переписка не продолжалась, достаточно не отвечать на письмо или написать об этом на ту же почту.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="#top">
+            <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="7" y="2" width="14" height="9" rx="2.2" fill="currentColor" opacity=".38"/><rect x="4" y="7.5" width="14" height="9" rx="2.2" fill="currentColor" opacity=".68"/><rect x="1" y="13" width="14" height="9" rx="2.2" fill="currentColor"/></svg></span>
+            Stack
+          </a>
+          <p>София Иванова. Сайты и веб-приложения под ключ, весь стек в одних руках.</p>
+        </div>
+        <div>
+          <p class="kicker">Навигация</p>
+          <ul>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#work">Работы</a></li>
+            <li><a href="#prices">Цены</a></li>
+            <li><a href="#faq">Вопросы</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="kicker">Связь</p>
+          <ul>
+            <li><a data-contact="vk" href="https://vk.ru/id1133786912">ВКонтакте</a></li>
+            <li><a data-contact="telegram" href="https://t.me/soffff277">Telegram</a></li>
+            <li><a data-contact="email" data-write="text" href="mailto:sofiaaaa.ivanova@gmail.com">sofiaaaa.ivanova@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="kicker">Документы</p>
+          <ul>
+            <li><a href="#privacy">Политика конфиденциальности</a></li>
+            <li><a href="#process">Как идёт работа</a></li>
+            <li><a href="#contact">Заявка</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal-line">
+        <span>© <span id="year">2026</span> София Иванова</span>
+        <a href="#top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
